@@ -55,12 +55,16 @@ public:
 	void close() override {};
 	time_t getLastWrite() override { return 0; };
 #if defined ESP_IDF_VERSION && defined ESP_IDF_VERSION_VAL
-	#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 0, 0)
-		const char* path() const override { return "not implemented yet"; };
-	#endif
-	#if ESP_ARDUINO_VERSION >= ESP_ARDUINO_VERSION_VAL(2, 0, 3)
-		bool setBufferSize(size_t size) override { return false; };
-	#endif
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 0, 0)
+  const char *path() const override {
+    return "not implemented yet";
+  };
+#endif
+#if ESP_ARDUINO_VERSION >= ESP_ARDUINO_VERSION_VAL(2, 0, 3)
+  bool setBufferSize(size_t size) override {
+    return false;
+  };
+#endif
 #endif
 	const char* name() const override { return _Name.c_str(); };
 #if   defined(ESP32)

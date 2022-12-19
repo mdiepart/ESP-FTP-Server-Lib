@@ -1,22 +1,25 @@
 
 {
     "$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
-    "name": "ESP-FTP-Server-Lib",
-    "version": "0.11.0",
+    "name": "ESP-FTP-Server-Lib-ng",
+    "version": "0.11.1",
     "description": "Simple and modern FTP server for ESP devices.",
     "keywords": "communication, files, server, ftp",
     "authors":
     [
         {
             "name": "Peter Buchegger",
-            "email": "peter@pbuchegger.at",
+            "email": "peter@pbuchegger.at"
+        },
+        {
+            "name": "Morgan Diepart",
             "maintainer": true
         }
     ],
     "repository": 
     {
         "type": "git",
-        "url": "https://github.com/peterus/ESP-FTP-Server-Lib"
+        "url": "https://github.com/mdiepart/ESP-FTP-Server-Lib"
     },
     "license": "MIT",
     "frameworks": "arduino",
@@ -32,7 +35,8 @@
     "export": {
         "exclude":
         [   
-            ".clang-format",
+            ".github",
+            ".gitignore",
             "*.tar.gz"
         ]
     }
